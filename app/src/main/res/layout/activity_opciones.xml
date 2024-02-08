@@ -1,0 +1,84 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_bk_2"
+    android:columnCount="2"
+    android:padding="44dp"
+    android:rowCount="2">
+
+
+    <TextView
+        android:id="@+id/btnAltaEq"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_row="0"
+        android:layout_rowWeight="1"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/bg_circular_2"
+        android:fontFamily="@font/bomb"
+        android:gravity="center"
+        android:onClick="onAltaEq"
+        android:text="Alta equipo"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/btnListado"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/bg_circular_2"
+        android:fontFamily="@font/bomb"
+        android:gravity="center"
+        android:onClick="onListado"
+        android:text="Listado equipo"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="14sp" />
+
+    <!-- Sección 3 (Abajo Izquierda) -->
+    <TextView
+        android:id="@+id/btnAltaRes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/bg_circular_2"
+        android:fontFamily="@font/bomb"
+        android:gravity="center"
+        android:onClick="onAltaResultado"
+        android:text="Alta resultados"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="14sp" />
+
+    <!-- Sección 4 (Abajo Derecha) -->
+    <TextView
+        android:id="@+id/btnClasamento"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/bg_circular_2"
+        android:fontFamily="@font/bomb"
+        android:gravity="center"
+        android:onClick="onClasamento"
+        android:text="Clasamento"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+</GridLayout>
+
