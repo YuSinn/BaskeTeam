@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_jugador"
+    android:layout_margin="12dp"
+    app:cardBackgroundColor="@color/material_dynamic_primary20"
+    app:cardCornerRadius="15dp"
+    app:contentPadding="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/nombreJugador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/viper3d"
+            android:text="Nombre: "
+            android:textColor="@color/design_default_color_error" />
+
+        <TextView
+            android:id="@+id/dorsalJugador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/viper3d"
+            android:text="Dorsal: "
+            android:textColor="@color/design_default_color_error" />
+
+        <TextView
+            android:id="@+id/posicionJugador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/viper3d"
+            android:text="Posicion: "
+            android:textColor="@color/design_default_color_error" />
+
+        <TextView
+            android:id="@+id/equipoJugador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/viper3d"
+            android:text="Equipo: "
+            android:textColor="@color/design_default_color_error" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
