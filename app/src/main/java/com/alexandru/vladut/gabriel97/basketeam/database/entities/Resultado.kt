@@ -19,7 +19,7 @@ import java.util.Date
         onDelete = ForeignKey.CASCADE
     )],indices = [Index("equipoLocalFK"), Index("equipoVisitanteFK")])
 data class Resultado(
-    @PrimaryKey val id: Int,
+    @PrimaryKey(autoGenerate = true) val id: Int,
     val equipoLocalFK: String,
     val equipoVisitanteFK: String,
     val golesLocal: Int,

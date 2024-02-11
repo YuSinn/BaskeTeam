@@ -21,6 +21,9 @@ interface ClasificacionDao {
     @Query("SELECT * FROM clasificaciones ORDER BY puntos DESC")
     suspend fun getAllOrderedByPuntosDesc(): List<Clasificacion>
 
+    @Query("Update clasificaciones set puntos= :puntos where id = :id ")
+    suspend fun updateClasamentoById(id:Int,puntos:Int):Int
+
     // Elimina una clasificación de la base de datos
     @Delete
     suspend fun deleteClasificacion(clasificacion: Clasificacion)

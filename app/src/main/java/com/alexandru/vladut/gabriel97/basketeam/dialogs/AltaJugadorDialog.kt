@@ -8,12 +8,13 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.DialogFragment
 import com.alexandru.vladut.gabriel97.basketeam.AltaEquipo
+import com.alexandru.vladut.gabriel97.basketeam.EditarEquipo
 import com.alexandru.vladut.gabriel97.basketeam.R
 
 class AltaJugadorDialog :DialogFragment() {
 
     var altaEquipo: AltaEquipo? = null
-
+    var editarEquipo: EditarEquipo? = null
     lateinit var editTextNombreJugador: EditText
     lateinit var editTextDorsal: EditText
     lateinit var editTextPosicion: EditText

@@ -1,5 +1,6 @@
 package com.alexandru.vladut.gabriel97.basketeam.database.entities
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
@@ -14,7 +15,7 @@ import androidx.room.PrimaryKey
     )],
     indices = [Index("nombreEquipoFK")])
 data class Clasificacion(
-    @PrimaryKey val id: Int,
+    @PrimaryKey(autoGenerate = true) val id: Int,
     val puntos: Int,
     val nombreEquipoFK: String
 )

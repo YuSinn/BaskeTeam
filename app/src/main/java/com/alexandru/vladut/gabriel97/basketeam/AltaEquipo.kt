@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.alexandru.vladut.gabriel97.basketeam.adapters.CustomerAdapterJugador
 import com.alexandru.vladut.gabriel97.basketeam.database.BasketDataBase
+import com.alexandru.vladut.gabriel97.basketeam.database.entities.Clasificacion
 import com.alexandru.vladut.gabriel97.basketeam.database.entities.Equipo
 import com.alexandru.vladut.gabriel97.basketeam.database.entities.Jugador
 import com.alexandru.vladut.gabriel97.basketeam.dialogs.AltaEquipoDialog
@@ -41,9 +42,15 @@ class AltaEquipo : AppCompatActivity() {
         ).build()
         val equipoDao = db.equipoDao()
         val jugadorDao = db.jugadorDao()
+        val clasificacionDao = db.clasificacionDao()
 
         try {
+            if(nuevoEquipo!=null){
+            var clasificacion = Clasificacion(0,0,nuevoEquipo!!.nombreEquipo)
             nuevoEquipo?.let { equipoDao.insertEquipo(it) }
+            clasificacionDao.insertClasificacion(clasificacion)
+            }
+
         } catch (e: Exception){
             Toast.makeText(this, "No se puede crear el equipo!", Toast.LENGTH_LONG).show()
         }
@@ -64,9 +71,6 @@ class AltaEquipo : AppCompatActivity() {
         }catch (e :Exception){
             Toast.makeText(this, "No se puede mostrar!", Toast.LENGTH_SHORT).show()
         }
-        
-
-
     }
 
     fun onAltaEquipoDialogButton(view:View){

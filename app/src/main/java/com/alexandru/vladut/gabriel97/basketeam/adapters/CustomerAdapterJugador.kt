@@ -49,11 +49,11 @@ class CustomerAdapterJugador(private val jugadorList:List<Jugador>):RecyclerView
 
     override fun getItemCount() = jugadorList.size
 
+
     override fun onBindViewHolder(holder: JugadorViewHolder, position: Int) {
         //holder.textViewName.text = planetList[position].name
         //holder.textViewType.text = planetList[position].type
         //holder.imageViewPlanet.setImageResource(planetList[position].image)
-
         holder.bind(jugadorList[position], onClickListener)
     }
 

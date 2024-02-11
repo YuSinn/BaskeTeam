@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 import com.alexandru.vladut.gabriel97.basketeam.database.entities.Jugador
 
 @Dao
@@ -20,4 +21,7 @@ interface JugadorDao {
     // Elimina un jugador de la base de datos
     @Delete
     suspend fun deleteJugador(jugador: Jugador)
+
+    @Update
+    suspend fun updateJugador(jugador: Jugador)
 }

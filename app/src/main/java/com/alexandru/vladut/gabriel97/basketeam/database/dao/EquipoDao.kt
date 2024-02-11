@@ -18,10 +18,14 @@ interface EquipoDao {
     suspend fun getEquipos(): List<Equipo>
 
     // Obtiene un equipo por su nombre
-    @Query("SELECT * FROM equipos WHERE nombreEquipo = :nombre")
-    suspend fun getEquipoByNombre(nombre: String): Equipo
+   //@Query("SELECT * FROM equipos WHERE nombreEquipo = :nombre")
+   //suspend fun getEquipoByNombre(nombre: String): Equipo
+
+    @Query("SELECT * FROM equipos WHERE nombreEquipo LIKE :nombre || '%'")
+    suspend fun getEquiposByNombre(nombre: String): List<Equipo>
 
     // Elimina un equipo de la base de datos
     @Delete
     suspend fun deleteEquipo(equipo: Equipo)
+
 }
