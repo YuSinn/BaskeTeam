@@ -1,5 +1,6 @@
 package com.alexandru.vladut.gabriel97.basketeam
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -64,6 +65,8 @@ class AltaResultado : AppCompatActivity() {
             }
         })
     }
-
-
+    fun onClasamento(view: View){
+        val intent = Intent(this, Clasamento::class.java)
+        startActivity(intent)
+    }
 }

@@ -38,8 +38,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:onClick="onClasamento"
         app:cardBackgroundColor="#FF5722"
-        app:cardCornerRadius="20dp" >
+        app:cardCornerRadius="20dp">
 
         <TextView
             android:id="@+id/textView2"
@@ -48,7 +49,8 @@
             android:layout_gravity="center"
             android:fontFamily="@font/bomb"
             android:gravity="center"
-            android:text="Actualizar clasamento"
+            android:onClick="onClasamento"
+            android:text="Mostrar clasamento"
             android:textColor="#083075"
             android:textSize="18sp" />
     </androidx.cardview.widget.CardView>
